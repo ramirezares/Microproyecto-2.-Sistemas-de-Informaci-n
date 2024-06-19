@@ -3,7 +3,7 @@ import "./ChangingFooter.style.css";
 import Img from "./Img";
 
 const ChangingFooter = (props) => {
-  const className = props.kind;
+  const className = props.footerstate;
 
   if (className === "unimet") {
     return (
