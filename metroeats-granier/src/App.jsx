@@ -1,11 +1,13 @@
-import ChangingNavBar from "./components/ChangingNavBar";
+//import { useState } from "react";
+import Login from "./pages/Login.jsx"
+
 
 function App() {
-  return (
+
+
+  return(
     <>
-      <ChangingNavBar kind="offline" />
-      <ChangingNavBar kind="client" />
-      <ChangingNavBar kind="employee" />
+    <Login />
     </>
   );
 }
