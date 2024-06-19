@@ -17,13 +17,13 @@ const ChangingFooter = (props) => {
       <div className="unimet">
         <div className="pagelink">
             <p>Página principal de la Universidad Metropolitana:</p>
-            <a href="https://www.unimet.edu.ve">"https://www.unimet.edu.ve"</a>
+            <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
         </div>
         <div className="logo">
             <Img route="/logoUnimet50x50.jpg" />
         </div>
         <div className="copyright"><p>Copyright @ 2024 - Universidad Metropolitana. Todos los derechos reservados.</p>
-        <a href="https://www.unimet.edu.ve">"https://www.unimet.edu.ve"</a></div>
+        <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a></div>
       </div>
     );
   } else if (state === "granier") {
@@ -36,13 +36,13 @@ const ChangingFooter = (props) => {
         <div className="unimet">
         <div className="pagelink">
             <p>Página principal de la Universidad Metropolitana:</p>
-            <a href="https://www.unimet.edu.ve">"https://www.unimet.edu.ve"</a>
+            <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
         </div>
         <div className="logo">
             <Img route="/logoUnimet50x50.jpg" />
         </div>
         <div className="copyright"><p>Copyright @ 2024 - Universidad Metropolitana. Todos los derechos reservados.</p>
-        <a href="https://www.unimet.edu.ve">"https://www.unimet.edu.ve"</a></div>
+        <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a></div>
       </div>
       </>
     );
