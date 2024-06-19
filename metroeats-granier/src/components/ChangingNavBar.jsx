@@ -1,4 +1,4 @@
-//import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import "./ChangingNavBar.style.css";
 import ChangingButton from "./ChangingButton";
 import ProfileButton from "./ProfileButton";
@@ -71,5 +71,7 @@ const ChangingNavBar = (props) => {
 };
 
 /*TODO - Agregar el de Granier y el de empleado Granier*/
-
+ChangingNavBar.propTypes = {
+  navstate: PropTypes.string.isRequired,
+};
 export default ChangingNavBar;

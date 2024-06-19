@@ -1,4 +1,4 @@
-//import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import "./ChangingFooter.style.css";
 import Img from "./Img";
 import { useState, useEffect } from "react";
@@ -10,7 +10,6 @@ const ChangingFooter = (props) => {
   useEffect(() => {
     setState(props.footerstate);
   }, [props.footerstate]);
-
 
   if (state === "unimet") {
     return (
@@ -48,5 +47,7 @@ const ChangingFooter = (props) => {
     );
   }
 };
-
+ChangingFooter.propTypes = {
+  footerstate: PropTypes.string.isRequired,
+};
 export default ChangingFooter;
