@@ -1,6 +1,7 @@
 import "./Login.style.css";
 import ChangingButton from "../components/ChangingButton"
 import ChangingFooter from "../components/ChangingFooter"
+
 function LogIn()
 {return(
 <>
@@ -8,40 +9,29 @@ function LogIn()
 
         <div className="imageHolder"> < img src="../../public/MetroEats.png" className="unimetLogo" alt="Logo Unimet" /> </div>
 
-        <div className="inputHolder">
-            <h1>Inicio de Sesión</h1>
-            <form action="">
+            <div className="inputHolder">
+                <h3>Iniciar Sesión en UNIMET MetroEats</h3>
+                <form className="inputHolder1">
+                    
+                    <label>Correo electrónico: </label>
+                    <input placeholder="Correo Electrónico" />
+                    <br />
+                    <label>Contraseña: </label>
+                    <input placeholder="Contraseña" />
+                    <br />
+                    <button type="submit">Iniciar Sesión</button>    
+                </form>	
 
-           {/* <input type= "text" name= "username" value= {username} onChange = {handleChange}/>
-
-            <input type= "password" name= "password" value= {password} onChange = {handleChange}/>
-
-            <ChangingButton type= "submit" variant= "primary" disabled= {username || !password}> Iniciar Sesión </ChangingButton>
-
-                
-                </input>*/} 
-                <label>Correo electrónico: </label>
-                <input placeholder="Correo Electrónico" />
-                <br />
-                <br />
-                <label>Contraseña: </label>
-                <input placeholder="Contraseña" />
-            </form>	
-
-
-            <h1>Inicio Rapido de Sesión</h1>
-            <ChangingButton text="google" link="" style=""></ChangingButton>
-            <ChangingButton text="Facebook" link="" style=""></ChangingButton>
-
-            <h2>no tienes una cuenta?</h2>
-            <ChangingButton text="Registrate" link="" style=""></ChangingButton>
-
+                <h3>Inicio Rapido de Sesión</h3>
+                <ChangingButton text="google" link="" style=""></ChangingButton>
+                <br/>
+                <ChangingButton text="Facebook" link="" style=""></ChangingButton>
+                <p>¿No tienes cuenta?</p>
+                <ChangingButton text="Crear nueva Cuenta" link="" style=""></ChangingButton>
+            </div>
         </div>
-
-    </div>
-
     <ChangingFooter footerstate="unimet" />
-    </>
+</>
 )
 }
 

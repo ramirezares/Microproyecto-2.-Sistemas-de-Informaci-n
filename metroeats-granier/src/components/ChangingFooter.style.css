@@ -28,6 +28,24 @@
 .copyright{
     min-width: 35%;
     justify-items:center;
+    line-height: 25px;
 }
 
+
+
+.logoFooter{
+    width: 150px;
+    height: auto;
+    align-items: center;
+}
 /*TODO Centrar los div del link, logo y copiright. Estilizar */
+
+.linkUnimet{
+    color: white;
+    text-decoration: none;
+}
+
+.paginaPrincipal{
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
