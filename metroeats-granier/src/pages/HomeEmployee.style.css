@@ -1,0 +1,16 @@
+.navBar {
+  background-color: rgb(171, 103, 0);
+  display: flex;
+
+}
+
+.rightsBar {
+  background-color: #AD986E;
+  text-align: center;
+  justify-items: center;
+  min-width: 35%;
+}
+
+.interactionBar {
+  background-color:  #AD986E;
+}
