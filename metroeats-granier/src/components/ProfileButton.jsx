@@ -10,7 +10,7 @@ const ProfileButton = ({ text, style, link }) => {
 
   return (
     <div className="box">
-        <Img route="/logoUnimet50x50.jpg"/>
+        <Img route="/logoUnimet50x50.jpg" style="img"/>
         <ChangingButton text={text} style={style} onClick={onClick} />
     </div>
   );

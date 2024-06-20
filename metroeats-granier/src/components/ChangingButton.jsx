@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./ChangingButton.style.css"
+import "./ChangingButton.style.css";
 
 const ChangingButton = ({ text, style, link }) => {
   const onClick = () => {

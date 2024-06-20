@@ -1,9 +1,42 @@
 .navbar {
-    background-color: #D9D9D6;
-    height: fit-content;
-    border: black solid;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #d9d9d6;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar, .navbar-blue {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logos {
+  align-self: flex-start;
+}
+
+.buttons {
+  align-self: flex-end;
+}
+.navbar.buttons {
+  justify-content: space-between;
+}
+
+.navbar-blue {
+  background-color: #34394b;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logos{
+  display: flex;
+  align-self: center;
+  justify-self:flex-start;
+}
+
+.buttons{
+  display: flex;
+  align-self: center;
+  justify-self: flex-end;
 }
