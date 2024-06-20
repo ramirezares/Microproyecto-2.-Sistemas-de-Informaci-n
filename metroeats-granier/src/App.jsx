@@ -1,5 +1,6 @@
 //import { useState } from "react";
-import Login from "./pages/Login.jsx"
+// import Login from "./pages/Login.jsx"
+import LandingPage from "./pages/LandingPage.jsx";
 
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return(
     <>
-    <Login />
+    {/* <Login /> */}
+    <LandingPage />
     </>
   );
 }
