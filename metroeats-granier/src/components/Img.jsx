@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "./Img.style.css";
 
-function Img({ route, alt }) {
+function Img({ route, alt, style }) {
   return (
-    <div className="img">
+    <div className={style}>
       <img src={route} alt={alt}/>
     </div>
   );
