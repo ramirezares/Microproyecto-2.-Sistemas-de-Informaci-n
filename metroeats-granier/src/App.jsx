@@ -1,11 +1,15 @@
-// import { useState } from "react";
+//import { useState } from "react";
 // import Login from "./pages/Login.jsx"
-import HomeEmployee from "./pages/HomeEmployee.jsx"
+import LandingPage from "./pages/LandingPage.jsx";
+
 
 function App() {
+
+
   return(
     <>
-      <HomeEmployee />
+    {/* <Login /> */}
+    <LandingPage />
     </>
   );
 }
