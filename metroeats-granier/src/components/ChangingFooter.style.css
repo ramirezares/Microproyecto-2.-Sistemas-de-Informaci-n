@@ -29,4 +29,12 @@
   justify-items: center;
 }
 
+.img{
+  margin: 0px auto;
+  padding: 0px;
+  width: 150px;
+  height: auto;
+
+}
+
 /*TODO Centrar los div del link, logo y copiright. Estilizar */

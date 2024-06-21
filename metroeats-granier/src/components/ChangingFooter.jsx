@@ -18,7 +18,7 @@ const ChangingFooter = (props) => {
           <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
         </div>
         <div className="logo">
-          <Img route="/logoUnimet50x50.jpg" style="img" />
+          <img src="../../public/MetroEatsNaranja.png" className="img" />
         </div>
         <div className="copyright">
           <p>

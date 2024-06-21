@@ -1,0 +1,37 @@
+#unimetLogo1{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.col-md-4{
+    margin: 20px 50px 50px 50px ; ;
+
+}
+.col-md-5{
+    margin: 20px 50px 50px 50px;
+
+}
+.loginText{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+
+.form-check{
+    margin: 0px 20px 20px 20px;
+}
+
+.p{
+    font-weight: 700;
+}
+.col-md{
+    margin: 5px;
+    padding: 5px;
+}

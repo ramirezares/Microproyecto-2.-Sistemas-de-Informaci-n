@@ -1,6 +1,7 @@
 //import { useState } from "react";
-// import Login from "./pages/Login.jsx"
-import LandingPage from "./pages/LandingPage.jsx";
+import Login from "./pages/Login.jsx"
+//import LandingPage from "./pages/LandingPage.jsx";
+//import Register from "./pages/Register.jsx";
 
 
 function App() {
@@ -8,8 +9,8 @@ function App() {
 
   return(
     <>
-    {/* <Login /> */}
-    <LandingPage />
+    {/*<Register /> */}
+    <Login /> 
     </>
   );
 }
