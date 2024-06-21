@@ -9,7 +9,7 @@ function LandingPage () {
         <>
             <ChangingNavBar navstate="user"/>
             <div className="container">
-                {/* <div className="welcomeImg" /> */}
+                <img src="https://cdn.pixabay.com/photo/2015/11/10/08/31/banner-1036483_640.jpg" alt="bannerPrueba" />
                 <h2 className="welcome">¿Qué deseas para hoy?</h2>
                 <div className="rest1">
                     <ButtomImg />
