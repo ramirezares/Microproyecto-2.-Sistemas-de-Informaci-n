@@ -46,13 +46,13 @@ function LogIn() {
                                 <div className="row">
                                     <div className="col-md" id="check1">
                                         <div className="form-check">
-                                            <input className="form-check-input" type="radio" name="unimetUser" id="unimetUser" />
+                                            <input className="form-check-input" name="tipo usuario"  type="radio" id="unimetUser" />
                                             <label className="form-check-label" >Usuario Unimet</label>
                                         </div>
                                     </div>
                                     <div className="col-md" id="check2">
                                         <div className="form-check">
-                                            <input className="form-check-input" type="radio" name="foodManager" id="foodManager" />
+                                            <input className="form-check-input" name="tipo usuario" type="radio"  id="foodManager" />
                                             <label className="form-check-label" >Local de Comida</label>
                                             </div>
                                     </div>
