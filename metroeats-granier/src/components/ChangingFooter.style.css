@@ -39,5 +39,8 @@
   height: auto;
 
 }
-
+.a{
+  color: white;
+  text-decoration: none;
+}
 /*TODO Centrar los div del link, logo y copiright. Estilizar */
