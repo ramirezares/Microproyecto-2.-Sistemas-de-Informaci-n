@@ -1,14 +1,12 @@
 .rest{
-    width: 500px;
-    height: 175px;
+    width: 100%;
+    height: 125px;
     display: flex;
     align-items: center;
     border-radius: 15px;
-    background-image: url("https://tofuu.getjusto.com/orioneat-local/resized2/J6s9yYSnNZtE96Bfo-200-x.webp"), url("https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2020/11/30/5fc641304c561.r_d.629-239-0.jpeg");
-    background-size: 68%, cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
+    border: none;
     cursor: pointer;
+    background-repeat: no-repeat;
 }
 
 .rest:hover{

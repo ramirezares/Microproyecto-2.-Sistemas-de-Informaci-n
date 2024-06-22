@@ -2,14 +2,14 @@
 
 .rest1 {
     margin: auto;
-    width: fit-content;
+    width: 32%;
+    margin-bottom: 85px;
     margin-top: 55px;
-    margin-bottom: 55px;
 }
 
 .rest2 {
     margin: auto;
-    width: fit-content;
+    width: 32%;
     margin-bottom: 85px;
 }
 
@@ -19,13 +19,24 @@
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
-}
-
-.container {
     text-align: center;
 }
 
-.container img {
+.banner {
+    background-color: #ff8200;
+    height: fit-content;
     width: 100%;
-    height: 200px;
+    text-align: center;
+}
+
+.first {
+    width: 40%;
+    height: 40%;
+    padding: 15px;
+}
+
+.second {
+    width: 18%;
+    height: 18%;
+    padding: 15px;
 }
