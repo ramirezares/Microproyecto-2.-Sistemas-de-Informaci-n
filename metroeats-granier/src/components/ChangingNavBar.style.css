@@ -3,7 +3,6 @@
   height: fit-content;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
 }
 .navbar, .navbar-blue {
   display: flex;
@@ -11,12 +10,10 @@
 }
 
 .logos {
+  height: 100px;
   align-self: flex-start;
 }
 
-.buttons {
-  align-self: flex-end;
-}
 .navbar.buttons {
   justify-content: space-between;
 }
@@ -37,6 +34,4 @@
 
 .buttons{
   display: flex;
-  align-self: center;
-  justify-self: flex-end;
 }

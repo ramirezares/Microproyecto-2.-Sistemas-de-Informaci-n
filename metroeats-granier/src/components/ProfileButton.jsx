@@ -1,22 +1,23 @@
 import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
-import Img from "./Img";
 import "./ProfileButton.style.css"
+import { useNavigate } from "react-router-dom";
 
 const ProfileButton = ({ text, style, link }) => {
+  
+  const navigate = useNavigate();
+  
   const onClick = () => {
-    window.location.href = link; //TODO: Cambiar a link de React router
+    navigate(link)
   };
 
   return (
     <div className="box">
-        <Img route="/logoUnimet50x50.jpg" style="img"/>
+        <img className="img-fluid" src="/Icono de perfil.png" alt="" />
         <ChangingButton text={text} style={style} onClick={onClick} />
     </div>
   );
 };
-
-/*TODO Link del Router en a*/ 
 
 ProfileButton.propTypes = {
   text: PropTypes.string.isRequired,

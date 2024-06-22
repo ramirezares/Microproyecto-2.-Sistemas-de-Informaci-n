@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
 import ProfileButton from "./ProfileButton";
-import Img from "./Img";
-//import ButtonImg from "../ui/ButtonImg";
 import { useState, useEffect } from "react";
 import "./ChangingNavBar.style.css";
 
@@ -18,22 +16,22 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar">
         <div className="logos">
-          <Img
-            route="/logo-provicional-unimet-metroeats.jpg"
-            alt="Img"
-            style="img"
+          <img
+            className="img-fluid rounded float-start"
+            src="/MetroEats.png"
+            alt="img"
           />
         </div>
-        <div className="buttons">
+        <div className="d-flex justify-content-between">
           <ChangingButton
             text="Regístrate"
             style="bordered-blue-background"
-            link="https://refactoring.guru/es/design-patterns/chain-of-responsibility"
+            link="/register"
           />
           <ChangingButton
             text="Inicia Sesion"
             style="bordered-blue-background"
-            link="https://refactoring.guru/es/design-patterns/chain-of-responsibility"
+            link="/login"
           />
         </div>
       </div>
@@ -44,14 +42,20 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar">
         <div className="logos">
-          <Img
-            route="/logo-provicional-unimet-metroeats.jpg"
-            alt="Img"
-            style="img"
+          <img
+            className="img-fluid rounded float-start"
+            src="/MetroEats.png"
+            alt="img"
           />
         </div>
         <div className="buttons">
-          <ProfileButton text="Ares" style="borderless" link="" />
+          <ProfileButton
+            use="profile"
+            text="Ares"
+            style="borderless"
+            path="/Icono de perfil.png"
+            link="a"
+          />
         </div>
       </div>
     );
@@ -62,20 +66,27 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar-blue">
         <div className="logos">
-        <Img
-          route="/logo-provicional-unimet-metroeats.jpg"
-          alt="Img"
-          style="img"
-        />
-        <Img
-          route="/logo-provicional-unimet-metroeats.jpg"
-          alt="Img"
-          style="img"
-        />
+          <Img
+            route="/logo-provicional-unimet-metroeats.jpg"
+            alt="Img"
+            style="img"
+          />
+          <Img
+            route="/logo-provicional-unimet-metroeats.jpg"
+            alt="Img"
+            style="img"
+          />
         </div>
         <div className="buttons">
-        <ChangingButton text="Menu" style="borderless" link="" />
-        <ChangingButton text="Conocenos" style="borderless" link="" />
+          <ChangingButton text="Menu" style="borderless" disable />
+          <ChangingButton text="Conocenos" style="borderless" link="" />
+          <ProfileButton
+            use="profile"
+            text="Ares"
+            style="borderless"
+            path="/Icono de perfil.png"
+            link="a"
+          />
         </div>
       </div>
     );

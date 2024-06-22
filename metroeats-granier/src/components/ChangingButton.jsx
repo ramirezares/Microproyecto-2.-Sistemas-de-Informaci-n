@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import "./ChangingButton.style.css";
+import { useNavigate } from "react-router-dom";
 
 const ChangingButton = ({ text, style, link }) => {
+  
+  const navigate = useNavigate();
+
   const onClick = () => {
-    window.location.href = link; //TODO: Cambiar a link de React router
+    navigate(link);
   };
 
   return (

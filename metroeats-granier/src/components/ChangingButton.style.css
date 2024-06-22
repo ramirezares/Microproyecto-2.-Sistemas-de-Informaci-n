@@ -40,3 +40,13 @@
 .borderless:hover {
   color: gray;
 }
+
+.borderless-with-img {
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 30px;
+}
+
