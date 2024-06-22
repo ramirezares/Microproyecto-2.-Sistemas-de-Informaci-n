@@ -2,20 +2,36 @@
 
 .firstLine {
     margin-top: 35px;
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
+    text-align: center;
 }
 
 .secondLine {
     margin-bottom: 55px;
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
+    text-align: center;
 }
 
-.container {
-    text-align: center;
+.construction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-top: -150px;
+    margin-bottom: -100px;
+}
+
+.construction img {
+    display: block;
+    width: 45%;
+}
+
+.header {
+    position: fixed;
 }
