@@ -1,32 +1,33 @@
-.unimet {
-  background-color: #ff8200;
-  display: flex;
-  padding: 10px 20px;
-  color: white;
-  justify-content: center;
-}
-
-.granier {
-  background-color: #ad986e;
+footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  padding: 20px 0;
+  background-color: red;
 }
 
-.pagelink {
-  min-width: 35%;
-  justify-items: center;
+.granier, .unimet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
-.logo {
-  min-width: 30%;
-  justify-items: center;
+.granier a, .unimet .pagelink a {
+  color: #000;
+  text-decoration: none;
 }
 
-.copyright {
-  min-width: 35%;
-  justify-items: center;
+.granier p, .unimet .copyright p {
+  margin: 0;
 }
 
-/*TODO Centrar los div del link, logo y copiright. Estilizar */
+.unimet .logo {
+  text-align: center;
+}
+
+.unimet .logo img {
+  max-width: 100%;
+  height: auto;
+}

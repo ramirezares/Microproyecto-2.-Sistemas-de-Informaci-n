@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-/*import Login from './pages/Login.jsx'*/
+import WebRouter from './WebRouter'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+  <WebRouter/>    
   </React.StrictMode>,
 )
