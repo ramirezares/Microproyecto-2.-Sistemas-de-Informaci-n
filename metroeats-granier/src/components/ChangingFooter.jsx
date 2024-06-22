@@ -17,7 +17,7 @@ const ChangingFooter = (props) => {
           <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
         </div>
         <div className="logo">
-          <img className="img-fluid" src="../../public/MetroEatsNaranja.png"/>
+          <img className="img-fluid" src="/MetroEatsNaranja.png"/>
         </div>
         <div className="copyright">
           <p>
@@ -41,7 +41,7 @@ const ChangingFooter = (props) => {
             <a href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
           </div>
           <div className="logo">
-            <Img route="/logoUnimet50x50.jpg" style="img" />
+            <img src="/MetroEats.png" alt="" />
           </div>
           <div className="copyright">
             <p>

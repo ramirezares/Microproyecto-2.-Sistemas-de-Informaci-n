@@ -10,18 +10,23 @@ const Contact = () => {
       <h1>Informacion de contacto</h1>
       <div className="contanier">
         <div className="information">
-          <div>
+          
+          <div style={{ height: 100 }}>
+            <img src="/Facebook.png" alt="" />
+            <img style={{ padding: 10 }} src="/Instagram.png" alt="" />
+            <img src="/Twitter.png" alt="" />
             <p>@granierVzla</p>
           </div>
-          <div>
+
+          <div style={{ height: 100 }}>
+            <img src="/Correo.png" alt="" />
             <p>contacto@graniervzla.com</p>
           </div>
-          <div style={{ height: 100, backgroundColor: "blue" }}>
-            <img src="/Facebook.png" alt="" />
-            <img style={{padding: 10}} src="/Instagram.png" alt="" />
-            <img src="/Twitter.png" alt="" />
+
+          <div style={{ height: 100 }}>
             <p>+58 424 568 9898</p>
           </div>
+
         </div>
         <div className="message">
           <p>

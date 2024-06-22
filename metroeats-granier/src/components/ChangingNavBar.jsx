@@ -66,16 +66,8 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar-blue">
         <div className="logos">
-          <Img
-            route="/logo-provicional-unimet-metroeats.jpg"
-            alt="Img"
-            style="img"
-          />
-          <Img
-            route="/logo-provicional-unimet-metroeats.jpg"
-            alt="Img"
-            style="img"
-          />
+          <img src="/MetroEats.png" alt="" />
+          <img src="/MetroEats.png" alt="" />
         </div>
         <div className="buttons">
           <ChangingButton text="Menu" style="borderless" disable />
@@ -95,16 +87,8 @@ const ChangingNavBar = (props) => {
   } else if (state === "employee") {
     return (
       <div className="navbar-blue">
-        <Img
-          route="/logo-provicional-unimet-metroeats.jpg"
-          alt="Img"
-          style="img"
-        />
-        <Img
-          route="/logo-provicional-unimet-metroeats.jpg"
-          alt="Img"
-          style="img"
-        />
+        <img src="/MetroEats.png" alt="" />
+        <img src="/Granieradministradorlogo.png" alt="" />
         Empleado
         <ChangingButton text="Menu" style="borderless" link="" />
         <ChangingButton text="Pedidos" style="borderless" link="" />
