@@ -4,10 +4,10 @@ import Register from "./pages/Register";
 import LandingPage from './pages/LandingPage';
 import Contact from './pages/Contact';
 import InProgress from './pages/InProgress';
+import AboutUs from './pages/AboutUs';
 
 //import { useLocalStorage } from "react-use";
 /*
-import AboutUs from './pages/AboutUs';
 import CompleteRegister from './pages/CompleteRegister';
 import HomeEmployee from './pages/HomeEmployee';
 */
@@ -21,18 +21,13 @@ const WebRouter = () => {
 
   return (
     <Router>
-      
       <Routes>
         <Route path="" element={<LandingPage/>}/>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-<<<<<<< Updated upstream
         <Route path="/granier/contact" element={<Contact/>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
-        
-=======
         <Route path="/aboutus" element={<AboutUs />} />
->>>>>>> Stashed changes
         {/*
         
         <Route element={<ProtectedRoute canActivate={gmail}> Si existe gmail
