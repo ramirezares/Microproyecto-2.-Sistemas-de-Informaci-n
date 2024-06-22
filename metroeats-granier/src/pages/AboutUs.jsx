@@ -1,9 +1,8 @@
-import "./AboutUs.style.css";
+import React from "react"
 import ChangingButton from "../components/ChangingButton"
 import ChangingFooter from "../components/ChangingFooter"
-
-import React from "react"
 import ChangingNavBar from "../components/ChangingNavBar";
+import "./AboutUs.style.css";
 
 const AboutUs = () => { 
   return(

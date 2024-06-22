@@ -7,6 +7,7 @@ const Contact = () => {
   return (
     <>
       <ChangingNavBar navstate="user" />
+      <div>
       <h1>Informacion de contacto</h1>
       <div className="contanier">
         <div className="information">
@@ -36,6 +37,7 @@ const Contact = () => {
         </div>
       </div>
       <ChangingFooter footerstate="unimet" />
+      </div>
     </>
   );
 };

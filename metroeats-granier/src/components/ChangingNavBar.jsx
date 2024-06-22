@@ -3,8 +3,12 @@ import ChangingButton from "./ChangingButton";
 import ProfileButton from "./ProfileButton";
 import { useState, useEffect } from "react";
 import "./ChangingNavBar.style.css";
+import { useNavigate } from "react-router-dom";
 
 const ChangingNavBar = (props) => {
+  
+  const navigate = useNavigate();
+
   const [state, setState] = useState("offline");
 
   useEffect(() => {
@@ -16,6 +20,7 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar">
         <div className="logos">
+          
           <img
             className="img-fluid rounded float-start"
             src="/MetroEats.png"
