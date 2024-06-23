@@ -5,6 +5,8 @@ import LandingPage from './pages/LandingPage';
 import Contact from './pages/Contact';
 import InProgress from './pages/InProgress';
 import AboutUs from './pages/AboutUs';
+//import HomeEmployee from './pages/HomeEmployee';
+//import PaginaPrueba from "./pages/PaginaPrueba";
 
 import Register2 from "./pages/Register2.jsx";
 
@@ -19,6 +21,7 @@ const WebRouter = () => {
   /*
   const [user,setUser] = useLocalStorage("user")
   const [gmail,setGmail] = useLocalStorage("gmail")
+  const [employee,setEmployee] = useLocalStorage("employee")
   */
 
   return (
@@ -30,6 +33,7 @@ const WebRouter = () => {
         <Route path="/granier/contact" element={<Contact/>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
+
         <Route path="/Register2" element={<Register2 />} />
         {/*
         
@@ -38,13 +42,17 @@ const WebRouter = () => {
         
 
         <Route element={<ProtectedRoute canActivate={user}}> Que este activo la sesion
-                                                           guardando en local storage cuando inicie sesion
+        guardando en local storage cuando inicie sesion
         <Route path="/granier/aboutUs" element={<AboutUs/>}/>
           CONTACTO
         </Route>
 
         Route element={<ProtectedRoute canActivate={employee}> Que sea empleado
+
         <Route path="/granier/homeEmployee" element={<HomeEmployee/>}/>
+        <Route path="/prueba" element={<PaginaPrueba/>}/>
+        {/*
+        <Route path="/register/complete" element={<CompleteRegister/>}/>
         */}
       </Routes>
       
