@@ -22,22 +22,22 @@ function Register() {
     let vegetarianCheck = document.getElementById("vegetarianCheck").checked;
     let glutenFreeCheck = document.getElementById("glutenFreeCheck").checked;
 
-    console.log("vegan variable " + veganCheck);
-    console.log("vegeta variable " + vegetarianCheck);
-    console.log("gluten variable " + glutenFreeCheck);
+    // console.log("vegan variable " + veganCheck);
+    // console.log("vegeta variable " + vegetarianCheck);
+    // console.log("gluten variable " + glutenFreeCheck);
 
     return [veganCheck, vegetarianCheck, glutenFreeCheck];
   };
-
   const handleOcupationChange = (value) => {
     console.log("Ocupation changed to:", value);
     setOcupation(value);
   };
-
   const handleDepartmentChange = (value) => {
     console.log("Department changed to:", value);
     setDepartment(value);
   };
+
+
 
   const handleRegistration = async (e) => {
     console.log("Registrando usuario");
@@ -63,11 +63,13 @@ function Register() {
       }
 
       console.log("Usuario creado exitosamente");
-    } catch (error) {
+    } catch (error) {  //COLOCAR POP CON ERROR
       console.log("Por ahi no es");
       console.log(error.message);
     }
   };
+
+
 
   return (
     <>

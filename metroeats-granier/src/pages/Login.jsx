@@ -1,25 +1,63 @@
 import "./Login.style.css";
-import { useState } from "react";
+//import { useState, useEfect} from "react";
 import ChangingButton from "../components/ChangingButton"
 import ChangingFooter from "../components/ChangingFooter"
 
+import { jwtDecode } from "jwt-decode";
 //importando los modeulos de firebase
 //import appFirebase from "../Firebase";
 //import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 //const auth= getAuth(appFirebase);
+
+//import google plugins
+//import {gapi} from "gapi-script";
+//import { google } from 'googleapis';
+import { GoogleLogin } from '@react-oauth/google';
+
+const IDC="622416989618-q90npce1r8djjia0msugksigean0c3ld.apps.googleusercontent.com";
+
+const onerror=() => {console.log('Login Failed');}
+const onsucceeds=(credentialResponse) => {
+    const decoded = jwtDecode(credentialResponse?.credential);
+    console.log(decoded);}  
+
+
+
+
 function LogIn() {
+    //para usar luego
+    /*function handleCallbackResponse(credentialResponse) {
+
+        console.log("Encoded JWT ID token: " + credentialResponse.credential);
+        var userObject= jwtDecode(credentialResponse.credential);
+        console.log(userObject);    
+   
+
+    useEfect(() => {
+        Gobal Google 
+        function start(){
+            gapi.client.init({
+                clientId : IDC,
+                scope:""
+            })
+    }
+        gapi.load("client:auth2", start);
+    });
+
+
     const [email, setEmail]= useState(null);
     const [password, setPassword]= useState(null);
 
     console.log(email + password + setPassword +    setEmail)
-    /*const [user, setUser]= useState(null);
+    const [user, setUser]= useState(null);
     onAuthStateChanged(auth,(firebaseUser) => { 
         if (firebaseUser){
             setUser(firebaseUser);
         }else{
             setUser(null);
-        }})*/
+        }})
+        */
 
     return(
 <>
@@ -64,8 +102,27 @@ function LogIn() {
 
                     <button type="submit" className="btn btn-primary">Inciar Sesión</button>
                     <br />
+                    <div className="mb-3">
                     <h3>Inicio Rapido de Sesión</h3>
-                    <ChangingButton text="google" link="" style=""></ChangingButton>
+                    </div>
+
+                    
+                    <div className="mb-3"  id="googleBotton" >
+                        <GoogleLogin 
+                            clientId={IDC}
+                            buttonText="Iniciar Sesión con Google"
+                            render={renderProps => (
+                                <button className="btn btn-primary" onClick={renderProps.onClick} disabled={renderProps.disabled}></button>
+                            )}
+                            onSuccess={onsucceeds} 
+                            
+                            onError={onerror}
+                            />
+
+                        {/*if (credentialResponse) {
+                            Aqui hay que agarar los datos de ese diccionario para encontrar en la base de datos al usuario y colocarlo como usuario principal en el local storage
+                        }else{ reiniciar pagina }*/}
+                    </div>
                     <br/>
                     <ChangingButton text="Facebook" link="" style=""></ChangingButton>
                     <div className="registerText">¿No tienes cuenta?</div>

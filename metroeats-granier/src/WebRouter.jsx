@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import InProgress from './pages/InProgress';
 import AboutUs from './pages/AboutUs';
 
+import Register2 from "./pages/Register2.jsx";
+
 //import { useLocalStorage } from "react-use";
 /*
 import CompleteRegister from './pages/CompleteRegister';
@@ -28,6 +30,7 @@ const WebRouter = () => {
         <Route path="/granier/contact" element={<Contact/>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/Register2" element={<Register2 />} />
         {/*
         
         <Route element={<ProtectedRoute canActivate={gmail}> Si existe gmail
