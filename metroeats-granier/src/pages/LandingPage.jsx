@@ -2,11 +2,14 @@ import ChangingNavBar from "../components/ChangingNavBar";
 import ChangingFooter from "../components/ChangingFooter";
 import ButtonImg from "../components/ButtonImg";
 import "./LandingPage.style.css";
+import NewNavBarOffline from "../components/NewNavBarOffline";
+import NewFooterGranier from "../components/NewFooterGranier";
+
 
 const LandingPage = () => {
   return (
     <>
-      <ChangingNavBar navstate="offline" />
+      <NewNavBarOffline/>
       <div className="banner">
         <img className="first" src="/MetroEatsEslogan.png" />
         <img className="second" src="/Thinkingfood.png" />
@@ -26,7 +29,7 @@ const LandingPage = () => {
           backgroundImage2="/kioskobelieveunimet.jpg"
         />
       </div>
-      <ChangingFooter footerstate="granier" />
+      <NewFooterGranier/>
     </>
   );
 };

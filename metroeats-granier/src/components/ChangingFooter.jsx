@@ -31,7 +31,7 @@ const ChangingFooter = (props) => {
     return (
       <>
         <div className="granier">
-          <a href="https://graniervenezuela.com">@ GRANIER VENEZUELA |</a>
+          <a className="text-reset"   href="https://graniervenezuela.com">@ GRANIER VENEZUELA |</a>
           <p> Derechos reservados</p>
         </div>
         <div className="unimet">

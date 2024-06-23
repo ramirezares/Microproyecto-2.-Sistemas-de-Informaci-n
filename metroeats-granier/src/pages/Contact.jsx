@@ -1,6 +1,7 @@
 import React from "react";
 import ChangingNavBar from "../components/ChangingNavBar";
 import ChangingFooter from "../components/ChangingFooter";
+import NewNavBarEmployeeGranier from "../components/NewNavBarEmployeeGranier";
 import "./Contact.style.css";
 
 const Contact = () => {

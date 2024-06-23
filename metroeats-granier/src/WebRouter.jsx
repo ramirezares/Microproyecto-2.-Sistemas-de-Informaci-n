@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import InProgress from './pages/InProgress';
 import AboutUs from './pages/AboutUs';
 import HomeEmployee from './pages/HomeEmployee';
+import PaginaPrueba from "./pages/PaginaPrueba";
 
 //import { useLocalStorage } from "react-use";
 /*
@@ -31,6 +32,7 @@ const WebRouter = () => {
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/granier/homeEmployee" element={<HomeEmployee/>}/>
+        <Route path="/prueba" element={<PaginaPrueba/>}/>
         {/*
         <Route path="/register/complete" element={<CompleteRegister/>}/>
         */}

@@ -6,7 +6,7 @@ const ProfileButton = ({ text, style, link }) => {
   
   return (
     <div className="box">
-        <img className="img-fluid" src="/Icono de perfil.png" alt="" />
+        <img height="40" src="/iconopeque.png" alt="" />
         <ChangingButton text={text} style={style} link="" />
     </div>
   );
