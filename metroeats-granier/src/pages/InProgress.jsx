@@ -1,5 +1,3 @@
-import ChangingFooter from "../components/ChangingFooter";
-import ChangingNavBar from "../components/ChangingNavBar";
 import './InProgress.style.css';
 import NewNavBarEmployeeGranier from "../components/NewNavBarEmployeeGranier";
 import NewFooterUnimet from "../components/NewFooterUnimet";
