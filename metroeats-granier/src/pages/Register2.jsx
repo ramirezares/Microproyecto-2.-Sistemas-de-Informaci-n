@@ -10,8 +10,7 @@ import { useState } from "react";
 
 //Importacion de Componentes
 import OcupationArea from "../components/OcupationArea";
-import { useAuth } from "../AuthContext";
-import {AuthProvider} from "../AuthContext";
+import { useAuth, AuthProvider } from "../authContext";
 
 function Register2() {
     //constante que contiene todas lsa funciones de registro etc etc
