@@ -7,7 +7,7 @@ import InProgress from './pages/InProgress';
 import AboutUs from './pages/AboutUs';
 //import HomeEmployee from './pages/HomeEmployee';
 //import PaginaPrueba from "./pages/PaginaPrueba";
-
+import {AuthProvider} from "./AuthContext.jsx"
 import Register2 from "./pages/Register2.jsx";
 
 //import { useLocalStorage } from "react-use";
@@ -34,7 +34,8 @@ const WebRouter = () => {
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
 
-        <Route path="/Register2" element={<Register2 />} />
+        <Route path="/Register2" element={<AuthProvider><Register2 />
+          </AuthProvider>} />
         {/*
         
         <Route element={<ProtectedRoute canActivate={gmail}> Si existe gmail

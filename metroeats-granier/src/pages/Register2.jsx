@@ -10,7 +10,12 @@ import { useState } from "react";
 
 //Importacion de Componentes
 import OcupationArea from "../components/OcupationArea";
-import { useAuth, AuthProvider } from "../AuthContext";
+//Importaciones React
+import { useAuth } from "../AuthContextConst.jsx";
+
+//////////////////////////////////////////////////////////////
+
+
 
 function Register2() {
     //constante que contiene todas lsa funciones de registro etc etc
@@ -51,11 +56,9 @@ function Register2() {
         console.log("messi")
         try {
             const user = auth.currentUser;
-        
             console.log("llegue");
             console.log(ocupation);
             console.log(department);
-            
             if (user) {
                 await setDoc(doc(database, "Users", user.uid), {
                 email: user.email,
@@ -68,7 +71,6 @@ function Register2() {
                 });
             }
             console.log("Usuario creado exitosamente");
-
         } catch (error) {  //COLOCAR POP CON ERROR
             console.log("Por ahi no es");
             console.log(error.message);
@@ -84,7 +86,7 @@ function Register2() {
 
 return (
 <>
-<AuthProvider>
+
     <div className="container">
     <div className="row">
         <img src="/MetroEats.png" id="unimetLogo1" alt="Logo Unimet" />
@@ -247,7 +249,6 @@ return (
         </div>
         </div>
     </div>
-</AuthProvider>
     </>
 );
 }
