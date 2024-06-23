@@ -2,41 +2,57 @@
 import "./HomeEmployee.style.css";
 import ChangingButton from "../components/ChangingButton"
 import ChangingFooter from "../components/ChangingFooter"
-import Img from "../components/Img";
 import React from "react"
 
 const HomeEmployee = () => { 
   return(
     <>
-    <div className="loginPage1">
+    <div>
       <div className="navBar">
-
         <div className="logo">
-          <Img route=""/>
+          <img src="../../public/MetroEats.png"/>
         </div>
 
         <div className="logoGranier">
-          <Img route=""/>
+            <img src="../../public/Granieradministradorlogo-remove.png"/>
         </div>
-        <ChangingButton text="Menú" link="" style=""></ChangingButton>
-        <ChangingButton text="Pedidos" link="" style=""></ChangingButton>
-        <ChangingButton text="Cerrar Sesion" link="" style=""></ChangingButton>
+
+        <div>
+          <ChangingButton text="Menu" style="customStyleButtons" link="" />
+        </div>
+
+        <div>
+          <ChangingButton text="Pedidos" style="customStyleButtons" link="" />
+        </div>
+        <div>
+          <ChangingButton text="Cerrar sesion" style="customStyleButtons" link="" />
+        </div>
+        
       </div>
       <div className="imageBar">
-
+        <img src="../../public/Bakeryproducts.png" alt="First Image" class="topImage"/>
+        <img src="../../public/Granieradministradorlogo-remove.png" alt="Second Image" class="bottomImage"/>
+        <div class="overlayText">Pan de Verdad,Cada día</div>
       </div>
+      
       <div className="interactionBar">
-        <ChangingButton text="Ir al Menú" link="" style=""></ChangingButton>
-        <ChangingButton text="Agregar producto o promoción" link="" style=""></ChangingButton>
-        <ChangingButton text="Gestionar pedidos" link="" style=""></ChangingButton>
-        <ChangingButton text="Ver Reseña" link="" style=""></ChangingButton>
-        <Img/>
+        <div className="interactionBar_buttons">
+          <ChangingButton text="Ir al Menú" link="" style="customStyleButtons2"></ChangingButton>
+          <ChangingButton text="Agregar producto o promoción" link="" style="customStyleButtons2"></ChangingButton>
+          <ChangingButton text="Gestionar pedidos" link="" style="customStyleButtons2"></ChangingButton>
+          <ChangingButton text="Ver Reseña" link="" style="customStyleButtons2"></ChangingButton>
+        </div>
+        <div className="interactionBar_img">
+          <img src="../../public/Chicacafe.jpg"/>
+        </div>
       </div>
+
       <div className="rightsBar">
-        <p className="prove"><u>@ GRANIER VENEZUELA</u> | Derechos reservados</p>
+        <p className="prove"><a href="http://graniervenezuela.com/"><u>@ GRANIER VENEZUELA</u></a> | Derechos reservados</p>
       </div>
+
+      <ChangingFooter className="unimet"footerstate="unimet" />
     </div>
-    <ChangingFooter footerstate="unimet" />
     </>
   )
 }
