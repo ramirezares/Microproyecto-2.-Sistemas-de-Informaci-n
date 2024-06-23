@@ -18,9 +18,13 @@ import { useAuth } from "../AuthContextConst.jsx";
 
 
 function Register2() {
-    //constante que contiene todas lsa funciones de registro etc etc
-
+    //constante que contiene todas las funciones de registro etc etc
+    
     const auth = useAuth();
+    
+    const {displayName} = auth.user
+    console.log(displayName)
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -48,10 +52,13 @@ function Register2() {
     console.log("Department changed to:", value);
     setDepartment(value);
     };
-
-
     const handleRegistration = async (e) => {
         e.preventDefault();
+        const domainRegex = /(correo\.unimet\.edu\.ve|unimet\.edu\.ve)$/;
+        
+        if(domainRegex.test(email)){
+        console.log('Email is valid');    
+        
         auth.register(email, password)
         console.log("messi")
         try {
@@ -67,7 +74,7 @@ function Register2() {
                 phone: phone,
                 preferences: foodPreferences(),
                 ocupation: ocupation,
-                depCareer: department, /**Hay que ver como se maneja este */
+                depCareer: department, 
                 });
             }
             console.log("Usuario creado exitosamente");
@@ -75,7 +82,13 @@ function Register2() {
             console.log("Por ahi no es");
             console.log(error.message);
             }
-        };
+
+        }else{ /**COLOCAR POPUP ACA */
+            console.log('Email is not valid');
+            console.log("Correo invalido")
+        }
+
+    };
     
 
 

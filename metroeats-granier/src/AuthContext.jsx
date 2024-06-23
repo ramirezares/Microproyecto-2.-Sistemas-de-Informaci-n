@@ -6,21 +6,37 @@
 
 //Importaciones Firebase
 import {auth} from "./firebase.js"
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth"
-
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth"
 
 //Importaciones Google
 
 //Importaciones Facebook
 
 //Importaciones React
-import { authContext} from "./AuthContextConst.jsx"
+import {useState, useEffect} from "react";
+import { authContext } from "./AuthContextConst.jsx"
 import PropTypes from 'prop-types';
 
 //////////////////////////////////////////////////////////////
 
 /**Funcion encargada de globalizar nuestro contexto*/
 export function AuthProvider({children}){
+
+    const [user, setUser]=useState("");
+
+    useEffect(() => {
+        const logedUser =  onAuthStateChanged(auth, (currentUser)=>{
+            if(!currentUser){
+                console.log("No hay usuario")
+            }else{
+                setUser(currentUser)
+            }
+        })
+            return ()  =>  logedUser();
+    }, [])
+
+
+
     //Registro
     const register = async( email, password) => {
             const response = await createUserWithEmailAndPassword(auth, email, password);
@@ -59,7 +75,7 @@ export function AuthProvider({children}){
         }
 
     return(
-        <authContext.Provider value={{register,login, loginWithGoogle, logout}}>
+        <authContext.Provider value={{register,  login, loginWithGoogle, logout, user}}>
             {children}
         </authContext.Provider>
     );
