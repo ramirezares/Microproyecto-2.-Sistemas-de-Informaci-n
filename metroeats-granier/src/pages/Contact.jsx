@@ -6,7 +6,7 @@ import "./Contact.style.css";
 const Contact = () => {
   return (
     <>
-      <ChangingNavBar navstate="user" />
+      <ChangingNavBar navstate="granier" />
       <div>
       <h1>Informacion de contacto</h1>
       <div className="contanier">

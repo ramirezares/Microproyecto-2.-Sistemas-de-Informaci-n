@@ -6,7 +6,6 @@ import "./ChangingNavBar.style.css";
 import { useNavigate } from "react-router-dom";
 
 const ChangingNavBar = (props) => {
-  
   const navigate = useNavigate();
 
   const [state, setState] = useState("offline");
@@ -20,11 +19,13 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar">
         <div className="logos">
-          
           <img
             className="img-fluid rounded float-start"
             src="/MetroEats.png"
             alt="img"
+            onClick={() => {
+              navigate("/");
+            }}
           />
         </div>
         <div className="d-flex justify-content-between">
@@ -51,6 +52,9 @@ const ChangingNavBar = (props) => {
             className="img-fluid rounded float-start"
             src="/MetroEats.png"
             alt="img"
+            onClick={() => {
+              navigate("/");
+            }}
           />
         </div>
         <div className="buttons">
@@ -71,18 +75,40 @@ const ChangingNavBar = (props) => {
     return (
       <div className="navbar-blue">
         <div className="logos">
-          <img src="/MetroEats.png" alt="" />
-          <img src="/MetroEats.png" alt="" />
+          <img
+            src="/MetroEats.png"
+            alt=""
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          <img
+            src="/LogoGranier.png"
+            alt=""
+            onClick={() => {
+              navigate("/granier/contact");
+            }}
+          />
         </div>
         <div className="buttons">
-          <ChangingButton text="Menu" style="borderless" disable />
+          <ChangingButton text="Menu" style="borderless" link="" disable />
           <ChangingButton text="Conocenos" style="borderless" link="" />
+          <div className="img-fluent">
+            <img
+              src="/Carrito.png"
+              alt=""
+              onClick={() => {
+                navigate("/inprogress");
+              }}
+            />
+          </div>
+
           <ProfileButton
             use="profile"
             text="Ares"
+            link="/"
             style="borderless"
             path="/Icono de perfil.png"
-            link="a"
           />
         </div>
       </div>
@@ -92,8 +118,20 @@ const ChangingNavBar = (props) => {
   } else if (state === "employee") {
     return (
       <div className="navbar-blue">
-        <img src="/MetroEats.png" alt="" />
-        <img src="/Granieradministradorlogo.png" alt="" />
+        <img
+          src="/MetroEats.png"
+          alt=""
+          onClick={() => {
+            navigate("/");
+          }}
+        />
+        <img
+          src="/Granieradministradorlogo.png"
+          alt=""
+          onClick={() => {
+            navigate("granier/homeEmployee");
+          }}
+        />
         Empleado
         <ChangingButton text="Menu" style="borderless" link="" />
         <ChangingButton text="Pedidos" style="borderless" link="" />

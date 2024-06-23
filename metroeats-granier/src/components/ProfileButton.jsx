@@ -1,20 +1,13 @@
 import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
 import "./ProfileButton.style.css"
-import { useNavigate } from "react-router-dom";
 
 const ProfileButton = ({ text, style, link }) => {
   
-  const navigate = useNavigate();
-  
-  const onClick = () => {
-    navigate(link)
-  };
-
   return (
     <div className="box">
         <img className="img-fluid" src="/Icono de perfil.png" alt="" />
-        <ChangingButton text={text} style={style} onClick={onClick} />
+        <ChangingButton text={text} style={style} link="" />
     </div>
   );
 };

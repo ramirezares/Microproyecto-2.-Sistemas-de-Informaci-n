@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Contact from './pages/Contact';
 import InProgress from './pages/InProgress';
 import AboutUs from './pages/AboutUs';
+import HomeEmployee from './pages/HomeEmployee';
 
 //import { useLocalStorage } from "react-use";
 /*
@@ -17,6 +18,7 @@ const WebRouter = () => {
   /*
   const [user,setUser] = useLocalStorage("user")
   const [gmail,setGmail] = useLocalStorage("gmail")
+  const [employee,setEmployee] = useLocalStorage("employee")
   */
 
   return (
@@ -28,20 +30,9 @@ const WebRouter = () => {
         <Route path="/granier/contact" element={<Contact/>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
-        {/*
-        
-        <Route element={<ProtectedRoute canActivate={gmail}> Si existe gmail
-        <Route path="/register/complete" element={<CompleteRegister/>}/>
-        
-
-        <Route element={<ProtectedRoute canActivate={user}}> Que este activo la sesion
-                                                           guardando en local storage cuando inicie sesion
-        <Route path="/granier/aboutUs" element={<AboutUs/>}/>
-          CONTACTO
-        </Route>
-
-        Route element={<ProtectedRoute canActivate={employee}> Que sea empleado
         <Route path="/granier/homeEmployee" element={<HomeEmployee/>}/>
+        {/*
+        <Route path="/register/complete" element={<CompleteRegister/>}/>
         */}
       </Routes>
       

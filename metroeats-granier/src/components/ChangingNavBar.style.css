@@ -11,6 +11,7 @@
 
 .logos {
   height: 100px;
+  width: auto;
   align-self: flex-start;
 }
 
@@ -34,4 +35,5 @@
 
 .buttons{
   display: flex;
+  align-items: center;
 }
