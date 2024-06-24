@@ -13,7 +13,7 @@ import Button from "react-bootstrap/Button";
 //Importacion Firebase
 
 //Importacion de Google
-import { GoogleLogin } from "@react-oauth/google";
+//import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import PopUp from "../components/PopUp.jsx";
 
@@ -24,46 +24,14 @@ import { FacebookLoginButton } from "react-social-login-buttons";
 ///////////////////////////////////////////////////////////////
 
 function LogIn() {
-<<<<<<< Updated upstream
   const [profile, setprofile] = useState("");
   const auth = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [succeed, setSucceed] = useState(null);
   const [error, setError] = useState(null);
-=======
-    const [profile, setprofile]= useState("")
-    const auth = useAuth();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  console.log("Succeso??: "+succeed)
 
-    const [succeed, setSucceed]= useState(false);
-    console.log("Succeso??: "+succeed)
-
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        auth.login(email, password);
-    };
-    const handleGoogle= async (e) => {
-            e.preventDefault();
-            //se va a llamar la cuestion
-            const credential = await auth.loginWithGoogle();
-            try {
-                //const user = credential.user;
-                const userInfo = getAdditionalUserInfo(credential);
-                console.log(userInfo.profile);
-                // Extract the necessary information from the Google user object
-                const { email } = userInfo.profile;
-                setEmail(email)
-                setSucceed(true)
-            } catch (error) {
-                setSucceed(false);
-                console.log("Error login user with Google:", error.message);
-            }
-        }
->>>>>>> Stashed changes
-
-  console.log(email + " " + password);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -192,45 +160,6 @@ function LogIn() {
               </div>
 
               <div className="mb-3">
-                {!profile ? (
-                  <LoginSocialFacebook
-                    appId="1198674931381739"
-                    onResolve={(response) => {
-                      console.log(response);
-                      setprofile(response.data);
-                      console.log(profile);
-                    }}
-                    onReject={(error) => {
-                      console.log(error);
-                    }}
-                  >
-                    <FacebookLoginButton>
-                      Iniciar Sesión con Facebook
-                    </FacebookLoginButton>
-                  </LoginSocialFacebook>
-                ) : (
-                  ""
-                )}
-
-<<<<<<< Updated upstream
-                {profile
-                  ? console.log("sesion iniciada") &&
-                    "Redirigir a la pagina principal en el local storage"
-                  : ""}
-              </div>
-              {/**Boton de redireccion a register */}
-              <div className="registerText">¿No tienes cuenta?</div>
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={() => {
-                  navigate("/register");
-                }}
-              >
-                Crear nueva Cuenta
-              </button>
-=======
-                <div className="mb-3">
                     {!profile ? <LoginSocialFacebook 
                         appId="1198674931381739"
                         onResolve={(response)=>{console.log(response);
@@ -244,15 +173,26 @@ function LogIn() {
                     {profile ? console.log("sesion iniciada") && "Redirigir a la pagina principal en el local storage": ""}
                 </div>
 
-
-                {/**Boton de redireccion a register */}
-                <div className="registerText">¿No tienes cuenta?</div>
-                <button type="submit" className="btn btn-primary">
-                    Crear nueva Cuenta
-                </button>
+                <div>
+                {profile
+                  ? console.log("sesion iniciada") &&
+                    "Redirigir a la pagina principal en el local storage"
+                  : ""}
                 </div>
-            </div>
->>>>>>> Stashed changes
+              {/**Boton de redireccion a register */}
+                <div className="registerText">¿No tienes cuenta?</div>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  onClick={() => {
+                    navigate("/register");
+                  }}
+                >
+                  Crear nueva Cuenta
+                </button>
+
+            
+
             </div>
           </div>
         </div>
