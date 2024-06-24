@@ -3,7 +3,6 @@ import "./Login.style.css";
 import { useState } from "react";
 //Importacion Componentes
 import { useAuth } from "../AuthContextConst.jsx";
-import ChangingButton from "../components/ChangingButton";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -24,9 +23,9 @@ import { GoogleLogin } from "@react-oauth/google";
 ///////////////////////////////////////////////////////////////
 
 const IDC =
-  "622416989618-q90npce1r8djjia0msugksigean0c3ld.apps.googleusercontent.com";
+"622416989618-q90npce1r8djjia0msugksigean0c3ld.apps.googleusercontent.com";
 const onerror = () => {
-  console.log("Login Failed");
+console.log("Login Failed");
 };
 const onsucceeds = (credentialResponse) => {
   const decoded = jwtDecode(credentialResponse?.credential);
@@ -129,8 +128,14 @@ function LogIn() {
                             }else{ reiniciar pagina }*/}
                 </div>
 
-                <br />
-                <ChangingButton text="Facebook" link="" style=""></ChangingButton>
+                <div className="mb-3">
+                <Button className="boton" variant="primary">
+                    Facebook
+                </Button>
+                </div>
+
+
+                {/**Boton de redireccion a register */}
                 <div className="registerText">¿No tienes cuenta?</div>
                 <button type="submit" className="btn btn-primary">
                     Crear nueva Cuenta

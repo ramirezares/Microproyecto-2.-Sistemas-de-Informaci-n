@@ -6,7 +6,7 @@
 
 //Importaciones Firebase
 import {auth} from "./firebase.js"
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth"
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged,FacebookAuthProvider} from "firebase/auth"
 
 //Importaciones Google
 
@@ -28,13 +28,13 @@ export function AuthProvider({children}){
         const logedUser =  onAuthStateChanged(auth, (currentUser)=>{
             if(!currentUser){
                 console.log("No hay usuario")
+                setUser("")
             }else{
                 setUser(currentUser)
             }
         })
             return ()  =>  logedUser();
     }, [])
-
 
 
     //Registro
@@ -55,7 +55,11 @@ export function AuthProvider({children}){
     //Inicio Sesion con Google
     const loginWithGoogle= async() =>{
         try { const responseGoogle = new GoogleAuthProvider();
-            return await signInWithPopup(auth, responseGoogle);
+            const info=await signInWithPopup(auth, responseGoogle)
+            console.log(info)
+            console.log(info.user)
+            setUser(info.user)
+            return info;
         } catch (error) { {/*AQUI VA UN POP-UP CON EL ERROR*/}
             console.log(error.message);
         }
@@ -63,7 +67,34 @@ export function AuthProvider({children}){
 
     //Inicio Sesion con Facebook
 
-        
+    const loginWithFacebook = async () => {
+        try {
+            const provider = new FacebookAuthProvider();
+            const result = await signInWithPopup(auth, provider);
+            // You can also get the Facebook access token if needed
+            const credential = FacebookAuthProvider.credentialFromResult(result);
+            console.log(credential)
+            setUser(result.user);
+            console.log(result)
+            
+            return result;
+
+            } catch (error) {
+            // Handle Errors here.
+            const errorCode = error.code;
+            console.log(errorCode)
+            const errorMessage = error.message;
+            console.log(errorMessage)
+            // The email of the user's account used.
+            const email = error.customData.email;
+            console.log(email)
+            // The AuthCredential type that was used.
+            const credential = FacebookAuthProvider.credentialFromError(error);
+            console.log(credential);
+            console.log(error);
+        }
+        }
+    
     //Cierre Sesion
     const logout = async() => {
             try{const response = await signOut(auth)
@@ -75,7 +106,7 @@ export function AuthProvider({children}){
         }
 
     return(
-        <authContext.Provider value={{register,  login, loginWithGoogle, logout, user}}>
+        <authContext.Provider value={{register,  login, loginWithGoogle, logout, user,loginWithFacebook}}>
             {children}
         </authContext.Provider>
     );
