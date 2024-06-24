@@ -5,7 +5,7 @@ import "./NewNavBar.style.css";
 
 const NewNavBarOffline = () => {
   return (
-    <nav className="navbar fixed-top navbar-expand-lg bg-light">
+    <nav className="navbar fixed-top navbar-expand-lg bd-light">
       <div className="container-fluid">
         <Link to="/">
           <img src="./MetroEats.png" width="90" />
