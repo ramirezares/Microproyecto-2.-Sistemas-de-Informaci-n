@@ -95,7 +95,7 @@ function LogIn() {
               alt="Logo Unimet"
             />
           </div>
-          <div className="col-md-4">
+          <div className="mx-auto col-md-4">
             <div className="card card-body shadow-lg" id="input">
               <h4>Iniciar Sesión en UNIMET MetroEats</h4>
               {/*Inicio de SesionCoeeo */}
