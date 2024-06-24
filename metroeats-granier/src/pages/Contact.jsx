@@ -1,13 +1,13 @@
 import React from "react";
 import ChangingNavBar from "../components/ChangingNavBar";
 import ChangingFooter from "../components/ChangingFooter";
-import NewNavBarEmployeeGranier from "../components/NewNavBarEmployeeGranier";
+//import NewNavBarEmployeeGranier from "../components/NewNavBarEmployeeGranier";
 import "./Contact.style.css";
 
 const Contact = () => {
   return (
     <>
-      <ChangingNavBar navstate="granier" />
+      <ChangingNavBar />
       <div>
       <h1>Informacion de contacto</h1>
       <div className="contanier">

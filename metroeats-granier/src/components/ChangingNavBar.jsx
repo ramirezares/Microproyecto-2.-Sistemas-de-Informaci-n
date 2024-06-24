@@ -1,46 +1,72 @@
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
 import ProfileButton from "./ProfileButton";
 import { useState, useEffect } from "react";
-import "./ChangingNavBar.style.css";
 import { useNavigate } from "react-router-dom";
+import { useResolvedPath } from "react-router-dom";
+import { AuthProvider } from "../AuthContext";
+import "./ChangingNavBar.style.css";
 
-const ChangingNavBar = (props) => {
-  const navigate = useNavigate();
-
+const ChangingNavBar = () => {
   const [state, setState] = useState("offline");
 
+  const navigate = useNavigate();
+
+  const resolvedPath = useResolvedPath();
+
+  const granierRoutes = [
+    "/granier/contact",
+    "/granier/aboutUs",
+    "/granier/homeGranier",
+  ];
+
   useEffect(() => {
-    setState(props.navstate);
-  }, [props.navstate]);
+    
+    //Falta empleado para que el primer if sea empleado
+    if (AuthProvider.user && granierRoutes.includes(resolvedPath.pathname)) {
+      setState("granier");
+    } else if (AuthProvider.user) {
+      setState("user");
+    } else {
+      setState("offline");
+    }
+  }, [AuthProvider.user, resolvedPath]);
 
   //Offline
   if (state === "offline") {
     return (
-      <div className="navbar">
-        <div className="logos">
-          <img
-            className="img-fluid rounded float-start"
-            src="/MetroEats.png"
-            alt="img"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+      <nav className="navbar fixed-top navbar-expand-lg bg-light">
+        <div className="container-fluid">
+          <img src="./MetroEats.png" width="90" onClick={() => {navigate("/")}} />
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <form className="d-flex container-fluid gap-4 d-md-flex justify-content-md-end ">
+              <ChangingButton
+                text="Regístrate"
+                style="bordered-blue-background"
+                link="/register"
+              />
+              <></>
+              <ChangingButton
+                text="Inicio de sesión"
+                style="bordered-blue-background"
+                link="/login"
+              />
+            </form>
+          </div>
         </div>
-        <div className="d-flex justify-content-between">
-          <ChangingButton
-            text="Regístrate"
-            style="bordered-blue-background"
-            link="/register"
-          />
-          <ChangingButton
-            text="Inicia Sesion"
-            style="bordered-blue-background"
-            link="/login"
-          />
-        </div>
-      </div>
+      </nav>
     );
 
     //User  //TODO Hacer boton carrito button imag
@@ -146,7 +172,7 @@ const ChangingNavBar = (props) => {
 };
 
 /*TODO - Agregar logo al de Granier y el de empleado. Agg img perfil a granier*/
-ChangingNavBar.propTypes = {
-  navstate: PropTypes.string.isRequired,
-};
+// ChangingNavBar.propTypes = {
+//   navstate: PropTypes.string.isRequired,
+// };
 export default ChangingNavBar;

@@ -5,13 +5,13 @@ import "./NewNavBar.style.css";
 
 const NewNavBarOffline = () => {
   return (
-    <nav class="navbar fixed-top navbar-expand-lg bg-light">
-      <div class="container-fluid">
+    <nav className="navbar fixed-top navbar-expand-lg bg-light">
+      <div className="container-fluid">
         <Link to="/">
           <img src="./MetroEats.png" width="90" />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -19,10 +19,10 @@ const NewNavBarOffline = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <form class="d-flex container-fluid gap-4 d-md-flex justify-content-md-end ">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <form className="d-flex container-fluid gap-4 d-md-flex justify-content-md-end ">
             <ChangingButton
               text="Regístrate"
               style="bordered-blue-background"

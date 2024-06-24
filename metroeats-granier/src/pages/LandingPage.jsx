@@ -1,13 +1,13 @@
 import ButtonImg from "../components/ButtonImg";
 import "./LandingPage.style.css";
-import NewNavBarOffline from "../components/NewNavBarOffline";
+//import NewNavBarOffline from "../components/NewNavBarOffline";
 import NewFooterGranier from "../components/NewFooterGranier";
-
+import ChangingNavBar from "../components/ChangingNavBar";
 
 const LandingPage = () => {
   return (
     <>
-      <NewNavBarOffline/>
+      <ChangingNavBar />
       <div className="banner">
         <img className="first" src="/MetroEatsEslogan.png" />
         <img className="second" src="/Thinkingfood.png" />

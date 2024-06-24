@@ -24,15 +24,19 @@ const WebRouter = () => {
   const [employee,setEmployee] = useLocalStorage("employee")
   */
 
+  window.addEventListener("beforeunload", (ev) =>{
+    AuthProvider.logout
+  });
+
   return (
     <Router>
       <Routes>
-        <Route path="" element={<LandingPage/>}/>
-        <Route path="/register" element={<Register />} />
+        <Route path="" element={<AuthProvider><LandingPage/></AuthProvider>}/>
+        <Route path="/register" element={<AuthProvider><Register /></AuthProvider>} />
         <Route path="/login" element={<AuthProvider><Login /></AuthProvider>} />
-        <Route path="/granier/contact" element={<Contact/>}/>
+        <Route path="/granier/contact" element={<AuthProvider><Contact/></AuthProvider>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus" element={<AuthProvider><AboutUs /></AuthProvider>} />
         <Route path="/Register2" element={<AuthProvider><Register2 /></AuthProvider>} />
         {/*
         

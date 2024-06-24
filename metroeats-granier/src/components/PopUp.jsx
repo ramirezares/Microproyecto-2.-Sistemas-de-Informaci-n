@@ -1,15 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './PopUp.style.css';
 
-const PopUp = ({ text }) => {
-  const navigate = useNavigate();
+const PopUp = ({ text, onClose }) => {
 
   return (
     <div className="popup">
       <div className="popup-content">
         <p>{text}</p>
-        <button onClick={() => navigate(0)}>Aceptar</button>
+        <button onClick={onClose}>Aceptar</button>
       </div>
     </div>
   );
