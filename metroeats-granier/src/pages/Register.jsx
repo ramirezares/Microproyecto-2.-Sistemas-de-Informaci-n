@@ -112,7 +112,7 @@ function Register() {
           />
         </div>
         <div className="row">
-          <div className="col-md-5">
+          <div className="mx-auto col-md-5">
             <div className="card card-body shadow-lg" id="input">
               <h4>Regístrate en UNIMET MetroEats</h4>
               <form onSubmit={handleRegistration}>
@@ -250,7 +250,7 @@ function Register() {
           </div>
 
           {/*Registro rapido*/}
-          <div className="col-md-4">
+          <div className="mx-auto col-md-4">
             <div className="card card-body shadow-lg" id="input">
               <h4>Registro Rapido</h4>
               <div>

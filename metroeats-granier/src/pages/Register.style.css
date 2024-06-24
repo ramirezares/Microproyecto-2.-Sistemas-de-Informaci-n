@@ -1,9 +1,11 @@
+
 #unimetLogo{
     width: 200px;
     height: auto;
     margin: 0 auto;
     display: block;
     cursor: pointer;
+    justify-content: center;
 }
 
 .mb-3{
