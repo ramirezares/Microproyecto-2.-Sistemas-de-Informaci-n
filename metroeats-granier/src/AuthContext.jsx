@@ -106,7 +106,7 @@ export function AuthProvider({children}){
         }
 
     return(
-        <authContext.Provider value={{register,  login, loginWithGoogle, logout, user,loginWithFacebook}}>
+        <authContext.Provider value={{register, login, loginWithGoogle, logout, user,loginWithFacebook}}>
             {children}
         </authContext.Provider>
     );

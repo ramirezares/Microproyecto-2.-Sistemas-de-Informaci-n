@@ -33,9 +33,7 @@ const WebRouter = () => {
         <Route path="/granier/contact" element={<Contact/>}/>
         <Route path="/inprogress" element={<InProgress/>}/>
         <Route path="/aboutus" element={<AboutUs />} />
-
-        <Route path="/Register2" element={<AuthProvider><Register2 />
-          </AuthProvider>} />
+        <Route path="/Register2" element={<AuthProvider><Register2 /></AuthProvider>} />
         {/*
         
         <Route element={<ProtectedRoute canActivate={gmail}> Si existe gmail
