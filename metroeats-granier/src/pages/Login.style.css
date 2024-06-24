@@ -81,11 +81,56 @@
     
 }
 
+@media (max-width: 1200px) {
+    .unimetLogo{
+        width: 300px;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .inputHolder{
+        margin-left: 50px;
+    }
+    .inputHolder1{
+        margin-left: 50px;
+    }
+    .col-md-4{
+        margin: 50px auto;
+    
+    }
+    .col-md-8{
+        margin-top: 60px;
+    
+    }
+    .p{
+        font-size: 15px;
+    }
+    #check1{
+        margin: 0px 15px 10px 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 0px;
+        
+    }
+    #check2{
+        padding-top: 0px;
+        margin: 0px 15px 10px 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #googleBotton{
+        align-items: center;
+        align-content: center;
+        align-self: center;
+    
+        
+    }
+}
+
 @media (max-width: 600px) {
     .unimetLogo{
         width: 200px;
         margin-top: 50px;
-        margin-left: 50px;
+        margin-left: 30px;
     }
     .inputHolder{
         margin-left: 50px;
