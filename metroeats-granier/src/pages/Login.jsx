@@ -30,17 +30,16 @@ function LogIn() {
   const [password, setPassword] = useState("");
   const [succeed, setSucceed] = useState(null);
   const [error, setError] = useState(null);
-  console.log("Succeso??: "+succeed)
-
+  console.log("Succeso??: " + succeed);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      
-      await auth.login(email, password);
-      
+      const credentialUser = await auth.login(email, password);
+      console.log(credentialUser);
+
       setSucceed("Inicio de sesión exitoso");
-    
+
       console.log(auth.user);
     } catch (error) {
       console.log("Error login user:", error.message);
@@ -72,10 +71,10 @@ function LogIn() {
     }
   };
 
-  const handleCloseSucceed = () => {	
+  const handleCloseSucceed = () => {
     setSucceed(null);
     navigate("/");
-  }
+  };
 
   const handleCloseError = () => {
     setError(null);
@@ -93,6 +92,7 @@ function LogIn() {
               src="/MetroEats.png"
               className="unimetLogo"
               alt="Logo Unimet"
+              onClick={() => {navigate("/")}}
             />
           </div>
           <div className="mx-auto col-md-4">
@@ -160,39 +160,51 @@ function LogIn() {
               </div>
 
               <div className="mb-3">
-                    {!profile ? <LoginSocialFacebook 
-                        appId="1198674931381739"
-                        onResolve={(response)=>{console.log(response);
-                            setprofile(response.data);
-                            console.log(profile);
-                            setSucceed(true);}}
-                        onReject={(error)=>{setSucceed(false); console.log(error);}}>
-                        <FacebookLoginButton>Iniciar Sesión con Facebook</FacebookLoginButton>
-                    </LoginSocialFacebook>:''}
+                {!profile ? (
+                  <LoginSocialFacebook
+                    appId="1198674931381739"
+                    onResolve={(response) => {
+                      console.log(response);
+                      setprofile(response.data);
+                      console.log(profile);
+                      setSucceed(true);
+                    }}
+                    onReject={(error) => {
+                      setSucceed(false);
+                      console.log(error);
+                    }}
+                  >
+                    <FacebookLoginButton>
+                      Iniciar Sesión con Facebook
+                    </FacebookLoginButton>
+                  </LoginSocialFacebook>
+                ) : (
+                  ""
+                )}
 
-                    {profile ? console.log("sesion iniciada") && "Redirigir a la pagina principal en el local storage": ""}
-                </div>
-
-                <div>
                 {profile
                   ? console.log("sesion iniciada") &&
                     "Redirigir a la pagina principal en el local storage"
                   : ""}
-                </div>
+              </div>
+
+              <div>
+                {profile
+                  ? console.log("sesion iniciada") &&
+                    "Redirigir a la pagina principal en el local storage"
+                  : ""}
+              </div>
               {/**Boton de redireccion a register */}
-                <div className="registerText">¿No tienes cuenta?</div>
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  onClick={() => {
-                    navigate("/register");
-                  }}
-                >
-                  Crear nueva Cuenta
-                </button>
-
-            
-
+              <div className="registerText">¿No tienes cuenta?</div>
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={() => {
+                  navigate("/register");
+                }}
+              >
+                Crear nueva Cuenta
+              </button>
             </div>
           </div>
         </div>
@@ -201,7 +213,7 @@ function LogIn() {
       </div>
     </>
 
-    //auth/popup-closed-by-user
+    // Otro error a validar "auth/popup-closed-by-user"
   );
 }
 

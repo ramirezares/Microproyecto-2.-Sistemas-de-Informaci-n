@@ -1,6 +1,5 @@
 import ButtonImg from "../components/ButtonImg";
 import "./LandingPage.style.css";
-//import NewNavBarOffline from "../components/NewNavBarOffline";
 import NewFooterGranier from "../components/NewFooterGranier";
 import ChangingNavBar from "../components/ChangingNavBar";
 
