@@ -1,13 +1,14 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage.jsx";
 import Register from "./pages/Register.jsx";
-import Login from "./pages/Login";
+import Login from "./pages/Login.jsx";
 
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact.jsx";
 
-import HomeEmployee from "./pages/HomeEmployee";
-import InProgress from "./pages/InProgress";
+import HomeEmployee from "./pages/HomeEmployee.jsx";
+import InProgress from "./pages/InProgress.jsx";
 
 import { AuthProvider } from "./AuthContext.jsx";
 
@@ -78,7 +79,7 @@ const WebRouter = () => {
         />
 
         {/*En proceso*/}
-        <Route path="/inprogress" element={<InProgress />} />
+        <Route path="/inprogress" element={<AuthProvider><InProgress /></AuthProvider>} />
       </Routes>
     </Router>
   );

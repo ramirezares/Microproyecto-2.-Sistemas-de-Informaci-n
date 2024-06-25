@@ -1,7 +1,8 @@
+import React from "react";
 import ButtonImg from "../components/ButtonImg";
-import "./LandingPage.style.css";
 import NewFooterGranier from "../components/NewFooterGranier";
 import ChangingNavBar from "../components/ChangingNavBar";
+import "./LandingPage.style.css";
 
 const LandingPage = () => {
   return (

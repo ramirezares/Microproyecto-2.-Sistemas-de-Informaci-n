@@ -1,7 +1,7 @@
-import "./HomeEmployee.style.css";
+import React from "react";
 import ChangingButton from "../components/ChangingButton";
 import ChangingFooter from "../components/ChangingFooter";
-import React from "react";
+import "./HomeEmployee.style.css";
 
 const HomeEmployee = () => {
   return (

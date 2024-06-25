@@ -20,6 +20,7 @@ const ChangingNavBar = () => {
     try {
       await logout();
       setShouldNavigate(true);
+      
     } catch (error) {
       console.log(error);
     }

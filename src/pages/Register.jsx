@@ -4,14 +4,14 @@ import { setDoc, doc } from "firebase/firestore";
 import { getAdditionalUserInfo } from "firebase/auth";
 
 //Importacion React // ReactBootStrap
+import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "./Register.style.css";
 import { useState } from "react";
 import "./Register.style.css";
 
 //Importacion de Componentes
-import OcupationArea from "../components/OcupationArea";
+import OcupationArea from "../components/OcupationArea.jsx";
 //Importaciones React
 import { useAuth } from "../AuthContextConst.jsx";
 
@@ -39,10 +39,9 @@ function Register() {
       const user = credential.user;
       const userInfo = getAdditionalUserInfo(credential);
       console.log(userInfo.profile);
-      
+
       const { name, email, family_name, given_name } = userInfo.profile;
 
-      
       await setDoc(doc(database, "Users", user.uid), {
         email: email,
         firstName: given_name,
@@ -182,14 +181,16 @@ function Register() {
     <>
       <div className="container">
         <div className="row">
-          <img
-            src="/MetroEats.png"
-            id="unimetLogo1"
-            alt="Logo Unimet"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+          <div className="col-md-4">
+            <img
+              src="/MetroEats.png"
+              className="unimetLogo"
+              alt="Logo Unimet"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
+          </div>
         </div>
         <div className="row">
           {/*Registro Correo */}

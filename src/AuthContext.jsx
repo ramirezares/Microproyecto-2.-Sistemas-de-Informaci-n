@@ -21,6 +21,7 @@ import {
 //Importaciones Facebook
 
 //Importaciones React
+import React from "react";
 import { useState, useEffect } from "react";
 import { authContext } from "./AuthContextConst.jsx";
 import PropTypes from "prop-types";
