@@ -11,7 +11,7 @@ export const authContext = createContext();
 a partir de la funcion de useContext con el contexto antes creaddo*/
 export const useAuth = () => {
     const context = useContext(authContext);
-    if(!context){ //COLOCAR POPUP
+    if(!context){
         console.log("Error Creating auth Context. No se creo o no se inicializo correctamente el contexto.")
     }
     return context;

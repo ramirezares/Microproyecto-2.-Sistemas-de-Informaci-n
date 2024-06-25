@@ -1,3 +1,4 @@
+import React from "react";
 import ChangingNavBar from '../components/ChangingNavBar';
 import NewFooterUnimet from "../components/NewFooterUnimet";
 import './InProgress.style.css';

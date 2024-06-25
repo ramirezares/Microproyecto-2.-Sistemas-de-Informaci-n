@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import "./ChangingFooter.style.css";
 import { useState, useEffect } from "react";

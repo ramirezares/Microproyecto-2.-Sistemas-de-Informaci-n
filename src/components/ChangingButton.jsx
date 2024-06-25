@@ -1,10 +1,11 @@
+import React from "react";
 import "./ChangingButton.style.css";
 
 const ChangingButton = ({ text, style, onClick }) => {
   
   return (
     <button className={style} onClick={onClick}>
-      {text}
+    {text}
     </button>
   );
 };

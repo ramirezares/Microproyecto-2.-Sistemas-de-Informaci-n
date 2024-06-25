@@ -1,3 +1,5 @@
+import React from "react";
+
 const NavBarGranierEmployee = () => {
     return (
         <nav className="navbar fixed-top navbar-expand-lg">

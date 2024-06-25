@@ -1,6 +1,7 @@
+import React from "react";
 import PropTypes from "prop-types";
-import "./ButtonImg.style.css";
 import { useNavigate } from "react-router-dom";
+import "./ButtonImg.style.css";
 
 const ButtomImg = ({ link, backgroundImage1, backgroundImage2 }) => {
   const navigate = useNavigate();

@@ -1,7 +1,8 @@
 //Importacion React
-import "./Login.style.css";
+import React from "react";
 import { useState } from "react";
 import { getAdditionalUserInfo } from "firebase/auth";
+import "./Login.style.css";
 //Importacion Componentes
 import { useAuth } from "../AuthContextConst.jsx";
 import Form from "react-bootstrap/Form";
@@ -50,7 +51,7 @@ function LogIn() {
       } else if (error.code === "auth/user-not-found") {
         setError("Correo no encontrado, por favor intentelo de nuevo. Si no esta registrado cree una cuenta.");
       } else {
-        setError("Un error ha ocurrido, por favor revise e intentelo de nuevo.");
+        setError("Por favor revise e intente de nuevo.");
       }
     }
   };

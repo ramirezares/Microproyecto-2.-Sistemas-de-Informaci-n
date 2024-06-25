@@ -1,7 +1,8 @@
+import React from "react";
 import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
-import "./ProfileButton.style.css";
 import { useNavigate } from "react-router-dom";
+import "./ProfileButton.style.css";
 
 const ProfileButton = ({ text, style, link }) => {
   
