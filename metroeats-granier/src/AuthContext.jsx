@@ -60,8 +60,12 @@ export function AuthProvider({ children }) {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response);
     } catch (error) {
-      {
-        /*AQUI VA UN POP-UP CON EL ERROR*/
+      if (error.code === "auth/wrong-password") {
+        setError("Incorrect password.");
+      } else if (error.code === "auth/user-not-found") {
+        setError("User not found.");
+      } else {
+        setError("An error occurred. Please try again.");
       }
       console.log(error.message);
     }

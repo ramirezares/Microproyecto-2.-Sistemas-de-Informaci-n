@@ -1,28 +1,33 @@
-//import PropTypes from "prop-types";
 import ChangingButton from "./ChangingButton";
 import ProfileButton from "./ProfileButton";
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { AuthProvider } from "../AuthContext";
 import { useAuth } from "../AuthContextConst";
 
 const ChangingNavBar = () => {
-  const user = useAuth();
+  const user = useAuth().user;
+  const { logout } = useAuth();
+  console.log(user);
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [shouldNavigate, setShouldNavigate] = useState(false);
 
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
-      await AuthProvider.logout;
-      console.log("Cerrado")
-      navigate("/")
+      await logout();
+      setShouldNavigate(true);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const onClick = (link) => {
+    navigate(link);
+   }
 
   useEffect(() => {
     if (user) {
@@ -30,8 +35,15 @@ const ChangingNavBar = () => {
     } else {
       setIsAuthenticated(false);
     }
-
   }, [user]);
+
+  useEffect(() => {
+    
+    if (shouldNavigate) {
+      setShouldNavigate(false);
+      navigate("/");
+    }
+  }, [shouldNavigate, navigate]);
 
   if (isAuthenticated) {
     return (
@@ -101,13 +113,13 @@ const ChangingNavBar = () => {
               <ChangingButton
                 text="Regístrate"
                 style="bordered-blue-background"
-                link="/register"
+                onClick = {() => {onClick("/register")}}
               />
               <></>
               <ChangingButton
                 text="Inicio de sesión"
                 style="bordered-blue-background"
-                link="/login"
+                onClick = {() => {onClick("/login")}}
               />
             </form>
           </div>

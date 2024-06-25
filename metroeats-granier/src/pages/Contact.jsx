@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <NavBarGranier/>
-      <div>
+      <div className="body">
       <h1>Informacion de contacto</h1>
       <div className="contanier">
         <div className="information">
@@ -36,7 +36,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <ChangingFooter footerstate="unimet" />
+      <ChangingFooter footerstate="granier" />
       </div>
     </>
   );

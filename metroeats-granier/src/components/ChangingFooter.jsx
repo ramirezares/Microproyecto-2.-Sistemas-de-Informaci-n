@@ -14,10 +14,12 @@ const ChangingFooter = (props) => {
       <div className="unimet">
         <div className="pagelink">
           <p>Página principal de la Universidad Metropolitana:</p>
-          <a className="a" href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
+          <a className="a" href="https://www.unimet.edu.ve">
+            https://www.unimet.edu.ve
+          </a>
         </div>
         <div className="logo">
-          <img className="img-fluid" src="/MetroEatsNaranja.png"/>
+          <img className="img-fluid" src="/MetroEatsNaranja.png" />
         </div>
         <div className="copyright">
           <p>
@@ -31,16 +33,20 @@ const ChangingFooter = (props) => {
     return (
       <>
         <div className="granier">
-          <a className="text-reset"   href="https://graniervenezuela.com">@ GRANIER VENEZUELA |</a>
+          <a className="text-reset" href="https://graniervenezuela.com">
+            @ GRANIER VENEZUELA |
+          </a>
           <p> Derechos reservados</p>
         </div>
         <div className="unimet">
           <div className="pagelink">
             <p>Página principal de la Universidad Metropolitana:</p>
-            <a className="a" href="https://www.unimet.edu.ve">https://www.unimet.edu.ve</a>
+            <a className="a" href="https://www.unimet.edu.ve">
+              https://www.unimet.edu.ve
+            </a>
           </div>
           <div className="logo">
-            <img src="/MetroEats.png" alt="" />
+            <img className="img-fluid" src="/MetroEatsNaranja.png" />
           </div>
           <div className="copyright">
             <p>

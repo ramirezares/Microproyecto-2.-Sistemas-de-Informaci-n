@@ -1,6 +1,6 @@
-import './InProgress.style.css';
-import NewFooterUnimet from "../components/NewFooterUnimet";
 import ChangingNavBar from '../components/ChangingNavBar';
+import NewFooterUnimet from "../components/NewFooterUnimet";
+import './InProgress.style.css';
 
 function InProgress () {
     return (

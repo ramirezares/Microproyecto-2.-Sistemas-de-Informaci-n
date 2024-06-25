@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
-import Register2 from "./pages/Register2.jsx";
+import Register from "./pages/Register.jsx";
 import Login from "./pages/Login";
 
 import Contact from "./pages/Contact";
-import AboutUs from "./pages/AboutUs";
+
 import HomeEmployee from "./pages/HomeEmployee";
-import CompleteRegister from "./pages/CompleteRegister";
 import InProgress from "./pages/InProgress";
 
 import { AuthProvider } from "./AuthContext.jsx";
@@ -31,7 +30,7 @@ const WebRouter = () => {
           path="/register"
           element={
             <AuthProvider>
-              <Register2 />
+              <Register />
             </AuthProvider>
           }
         />

@@ -7,13 +7,7 @@ import { useAuth } from "../AuthContextConst.jsx";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-//Importacion lectura de tokens
-//import { jwtDecode } from "jwt-decode";
-
-//Importacion Firebase
-
 //Importacion de Google
-//import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import PopUp from "../components/PopUp.jsx";
 
@@ -30,10 +24,17 @@ function LogIn() {
   const [password, setPassword] = useState("");
   const [succeed, setSucceed] = useState(null);
   const [error, setError] = useState(null);
+
   console.log("Succeso??: " + succeed);
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
+    if (password.length < 6) {
+      setError("La contraseña debe tener más de 6 caracteres.");
+      return;
+    }
+
     try {
       const credentialUser = await auth.login(email, password);
       console.log(credentialUser);
@@ -42,7 +43,7 @@ function LogIn() {
 
       console.log(auth.user);
     } catch (error) {
-      console.log("Error login user:", error.message);
+      console.log(error.message);
       if (auth.error.code === "auth/wrong-password") {
         setError("Contraseña incorrecta, por favor intentelo de nuevo.");
       } else if (auth.error.code === "auth/user-not-found") {
@@ -92,7 +93,9 @@ function LogIn() {
               src="/MetroEats.png"
               className="unimetLogo"
               alt="Logo Unimet"
-              onClick={() => {navigate("/")}}
+              onClick={() => {
+                navigate("/");
+              }}
             />
           </div>
           <div className="mx-auto col-md-4">
