@@ -39,10 +39,10 @@ function Register() {
       const user = credential.user;
       const userInfo = getAdditionalUserInfo(credential);
       console.log(userInfo.profile);
-      // Extract the necessary information from the Google user object
+      
       const { name, email, family_name, given_name } = userInfo.profile;
 
-      // Save the user information to Firebase
+      
       await setDoc(doc(database, "Users", user.uid), {
         email: email,
         firstName: given_name,
@@ -76,7 +76,7 @@ function Register() {
       console.log(userInfo.profile);
       if (user) {
         const { name, email, first_name, last_name } = userInfo.profile;
-        // Guardar a; usuario en firebase
+        // Guarda al usuario en firebase
         await setDoc(doc(database, "Users", user.uid), {
           email: email,
           firstName: first_name,
@@ -143,7 +143,7 @@ function Register() {
     if (domainRegex.test(email)) {
       try {
         console.log("Email is valid");
-        auth.register(email, password);
+        await auth.register(email, password);
         const user = auth.currentUser;
         console.log(ocupation);
         console.log(department);
@@ -157,9 +157,9 @@ function Register() {
             ocupation: manageOcupationArea(ocupation),
             depCareer: manageOcupationArea(department),
           });
+          console.log("Usuario creado exitosamente");
+          setSucceed("Usuario registrado exitosamente.");
         }
-        console.log("Usuario creado exitosamente");
-        setSucceed("Usuario registrado exitosamente.");
       } catch (error) {
         //COLOCAR POP CON ERROR
         console.log("Error");

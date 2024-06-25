@@ -29,7 +29,7 @@ function LogIn() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
+
     if (password.length < 6) {
       setError("La contraseña debe tener más de 6 caracteres.");
       return;
@@ -44,14 +44,13 @@ function LogIn() {
       console.log(auth.user);
     } catch (error) {
       console.log(error.message);
-      if (auth.error.code === "auth/wrong-password") {
+
+      if (error.code === "auth/wrong-password") {
         setError("Contraseña incorrecta, por favor intentelo de nuevo.");
-      } else if (auth.error.code === "auth/user-not-found") {
-        setError(
-          "Correo no encontrado, por favor intentelo de nuevo. Si no esta registrado cree una cuenta."
-        );
+      } else if (error.code === "auth/user-not-found") {
+        setError("Correo no encontrado, por favor intentelo de nuevo. Si no esta registrado cree una cuenta.");
       } else {
-        setError("Un error ha ocurrido, por favor intentelo de nuevo.");
+        setError("Un error ha ocurrido, por favor revise e intentelo de nuevo.");
       }
     }
   };
