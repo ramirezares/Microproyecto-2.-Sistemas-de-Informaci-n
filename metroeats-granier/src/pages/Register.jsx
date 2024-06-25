@@ -20,7 +20,7 @@ import PopUp from "../components/PopUp.jsx";
 
 //////////////////////////////////////////////////////////////
 
-function Register2() {
+function Register() {
   //constante que contiene todas las funciones de registro etc etc
 
   const auth = useAuth();
@@ -369,4 +369,4 @@ function Register2() {
   );
 }
 
-export default Register2;
+export default Register;
