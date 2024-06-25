@@ -1,0 +1,46 @@
+.unimet {
+  background-color: #ff8200;
+  display: flex;
+  padding: 10px 20px;
+  color: white;
+  justify-content: center;
+}
+
+.granier {
+  background-color: #ad986e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.pagelink {
+  padding: 20px;
+  min-width: 35%;
+  justify-items: center;
+}
+
+.logo {
+  padding: 20px;
+  min-width: 30%;
+  justify-items: center;
+}
+
+.copyright {
+  padding: 20px;
+  min-width: 35%;
+  justify-items: center;
+}
+
+.img{
+  margin: 0px auto;
+  padding: 0px;
+  width: 150px;
+  height: auto;
+
+}
+.a{
+  color: white;
+  text-decoration: none;
+}
+/*TODO Centrar los div del link, logo y copiright. Estilizar */

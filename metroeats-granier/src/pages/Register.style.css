@@ -1,0 +1,62 @@
+
+#unimetLogo{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.mb-3{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-md-4{
+    margin: 20px 50px 50px 50px ; ;
+
+}
+.col-md-5{
+    margin: 20px 50px 50px 50px;
+
+}
+.loginText{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+
+.form-check{
+    margin: 0px 15px 20px 15px;
+}
+
+.p{
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    align-content: center;
+    text-align: left;
+}
+.col-md{
+    margin: 5px;
+    padding: 5px;
+}
+.boton{
+    align-self: center;
+}
+
+#b1{
+    padding: 10px;
+    margin: 10px;
+}
+
+#b2{
+    padding: 10px;
+    margin: 10px;
+}

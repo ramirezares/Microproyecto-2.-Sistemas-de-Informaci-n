@@ -1,0 +1,17 @@
+.box{
+    background-color: #34394B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    max-height: 100px;
+}
+
+.backgroundless{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+}
