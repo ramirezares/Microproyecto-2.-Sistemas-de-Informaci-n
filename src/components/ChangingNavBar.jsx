@@ -51,7 +51,7 @@ const ChangingNavBar = () => {
       <nav className="navbar fixed-top navbar-expand-lg bg-light">
         <div className="container-fluid">
           <img
-            src="./MetroEats.png"
+            src="/MetroEats.png"
             width="90"
             onClick={() => {
               navigate("/");
