@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NewFooterUnimet = () => {
 
     return (
-        <footer className='footer text-white py-3'>
+        <footer className='footer fixed-bottom text-white py-3'>
             <div className='container' >
                 <nav className='row'> 
                 <ul className="col-12 col-md-4 list-unstyled">
